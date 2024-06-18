@@ -62,7 +62,8 @@ For this track, your group will tell a story using data visualizations. Here are
 ### Querying our data base to create the visualizations using Plotly, Python Code, Pandas and Dash.
 
 - The data base was query using sqlalchemy. In this query 2024 was filtered out, as it was partial.
-
+- Create the Dash APP to show the three visalizations as a Dashboard.
+- A dropdown menu is used to select the year the user wants to see.
 
 
 ## Ethical Considerations
