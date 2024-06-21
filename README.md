@@ -2,52 +2,17 @@
 # Los Angeles County Crime Data
 
 ## Project Overview
-For this track, your group will tell a story using data visualizations. Here are the specific requirements:
 
-    Your project must include visualizations. The visualizations can be created with:
+This project delves into the analysis and visualization of crime data in Los Angeles spanning from 2000 to May 2024, sourced and cleaned from a Kaggle dataset.
+Excluding the year 2024, the analysis focuses on four key aspects:
+1. Total and by type annual crime trends using line plots
+2. Top 10 crime types per year depicted in a horizontal bar graph
+3. Top 3 crime types per year distributed by Zip Codes through a choropleth map
+4. Victim demographics in identity theft cases explored via treemaps.
 
-        Python (e.g. Matplotlib, Pandas plotting, hvplot)
-
-        JavaScript (e.g. Plotly or Leaflet)
-
-        A Python or JavaScript visualization library that was not covered in class
-
-    Data must be stored in and extracted from at least one database (PostgreSQL, MongoDB, SQLite, etc).
-
-    Your project must include at least one JavaScript OR Python library that we did not cover.
-
-    Your project must be powered by a dataset with at least 100 records.
-
-    Your project must include some level of user-driven interaction, such as:
-
-        HTML menus, dropdowns, and/or textboxes to display JavaScript-powered visualizations
-
-        Flask backend with interactive API routes that serve back Python or JavaScript created plots
-
-        Visualizations created from user-selected filtered data, which could be powered by:
-
-            JavaScript libraries
-
-            Python in Jupyter Notebook
-
-            Command-line Python scripts that save visualizations locally
-
-        Remember: You have learned how to filter data in Pandas, JavaScript, SQL, SQLAlchemy, and MongoDB.
-
-    If possible, your final visualization should ideally include at least three views.
-
-    Your GitHub repo must include a README.md with an outline of the project including:
-
-        An overview of the project and its purpose
-
-        Instructions on how to use and interact with the project
-
-        At least one paragraph summarizing efforts for ethical considerations made in the project
-
-        References for the data source(s)
-
-        References for any code used that is not your own
-
+Utilizing Python, Pandas, Matplotlib, Plotly, Dash, and SQLite, this analysis merges individual contributions into a cohesive group effort.
+The aim is to uncover meaningful insights that inform strategic decisions in law enforcement, urban planning, and community safety across Los Angeles.
+This approach underscores our commitment to leveraging data visualization for actionable intelligence and public benefit.
 
 
 ### Cleaning the data and sending it to a Sqlite.
@@ -68,14 +33,21 @@ For this track, your group will tell a story using data visualizations. Here are
 
 ## Ethical Considerations
 
+In light of growing awareness of data ethics, several key considerations were observed while analyzing the Los Angeles crime dataset available.
+- Firstly, the dataset's CC0 license allows for unrestricted use, including commercial purposes, without seeking permission from the author.
+- Secondly, all data handling adhered to privacy regulations such as GDPR and CCPA to protect individuals' personally identifiable information.
+- Thirdly, the analysis was conducted transparently, documenting data sources, methodology, and assumptions to facilitate understanding and validation of results.
+- Lastly, the analysis was conducted with the purpose of enhancing students' data analytics skills while ensuring no harm to individuals or communities, thus aligning with ethical standards. These ethical practices not only ensure legal compliance but also foster trust and integrity in analytical outcomes.
+
 
 ## Sources
 
 ### Data Set
-Kaggle.com
+https://www.kaggle.com/datasets/middlehigh/los-angeles-crime-data-from-2000/data
 
 ### Zip codes geojson file
 https://data.lacounty.gov/datasets/lacounty::la-county-zip-codes/about
+
 
 ## Team Members
 - Yi Wen
