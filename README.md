@@ -7,7 +7,7 @@ This project integrates individual contributions into a cohesive group effort to
 
 The findings are intended to be valuable for a range of stakeholders, including criminology students, police analysts, data analysis enthusiasts, and others interested in understanding urban crime dynamics.
 
--The results aim to enhance understanding of the city's dynamics to potentially reduce crime rates and improve overall safety in Los Angeles.
+The results aim to enhance understanding of the city's dynamics to potentially reduce crime rates and improve overall safety in Los Angeles.
 
 Following the analysis, we have developed a dashboard featuring visualizations that highlight four key aspects:
     1. Annual trends in total and by crime type using line plots.
