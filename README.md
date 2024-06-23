@@ -25,37 +25,37 @@ Following the analysis, we have developed a dashboard featuring visualizations t
 - Open and execute the code file clean_code.ipynb using Jupyter Notebook.
 - Open your web browser and navigate to http://127.0.0.1:8050/ to access the Dash application.
 
-## General steps
-- Create a Jupyter Notebook and import data set
-- Clean the data and create a clean pandas Data frame that was extracted into a SQlite data base
-- Query the data base to obtain the data needed for the analysis and visualizations
-- Prepare data needed for the visualizations
-- Create the Dash application and code each one of the visualizations.
+## General steps followed
+- Created a Jupyter Notebook and imported data set
+- Cleaned the data and created a clean pandas Data frame that was extracted into a SQlite data base
+- Queried the data base to obtain the data needed for the analysis and visualizations
+- Prepared data needed for the visualizations
+- Created the Dash application and coded each one of the visualizations.
 
 ## Detailed steps
-1. Import Dependencies
+1. Imported Dependencies
 
-2. Clean the data and create Data Base.
+2. Cleaned the data and created Data Base.
 
-    - Import csv file using *Pathlib* and *Pandas* libraries.
-    - Remove columns not needed.
-    - Create the "Year" column by splitting the date and time from the "DATE OCC" column, and then extracting the year.
-    - Map the "Vict Descent" replacing the codes with the actual descents.
-    - Create the "Zip Code" column using *Geopandas* and *Shapely.geometry* libraries and the geojson file containing the zip code coordinates to obtain the zip codes from the  "LON" and "LAT" columns.
+    - Imported csv file using *Pathlib* and *Pandas* libraries.
+    - Removed columns not needed.
+    - Created the "Year" column by splitting the date and time from the "DATE OCC" column, and then extracting the year.
+    - Mapped the "Vict Descent" replacing the codes with the actual descents.
+    - Created the "Zip Code" column using *Geopandas* and *Shapely.geometry* libraries and the geojson file containing the zip code coordinates to obtain the zip codes from the "LON" and "LAT" columns.
     - Removed some other columns not needed and renamed the final columns for readability.
-    - Extract the final Data Frame to a SQlite data base using *SQlite3*.
+    - Extracted the final Data Frame to a SQlite data base using *SQlite3*.
 
-3. Query Data Base, create dashboard and visualizations.
-    - Query the Data Base using *sqlalchemy* to create a base Data Frame with *Pandas*. 2024 data and records with no zip code were excluded.
-    - Create a zip code Data Frame needed for the Choropleth map
-    - Create lists needed for the dropdown menus.
-    - Simplify the geojson file limiting it to the zip codes needed, reducing its precision and simplifying the geometries.
-    - Create the Dashboard with *Dash*.
-    - Define the Layout
-    - Define callback and function to create a Total Trend Line and a Crime Type Trend Line using *plotly*. The Crime Type Trend line will change based on the type of crime selected. 
-    - Define callback and function to determine the radio button options and to build the Bar chart using *plotly express*. The Bar Chart will update based on year selected.
-    - Define callback and function to produce a Choropleth Map using *plotly graph_objects*. The map will change based on the year and type of crime selected.
-    - Define a callback and function to create the Tree Map usign *plotly graph_objects* that will update based on a second year dropdown selection.
+3. Queried Data Base, and created dashboard and visualizations.
+    - Queried the Data Base using *sqlalchemy* to create a base Data Frame with *Pandas*. 2024 data and records with no zip code were excluded.
+    - Created a zip code Data Frame needed for the Choropleth map
+    - Created lists needed for the dropdown menus.
+    - Simplified the geojson file limiting it to the zip codes needed, reducing its precision and simplifying the geometries.
+    - Created the Dashboard with *Dash*.
+    - Defined the Layout
+    - Defined callback and function to create a Total Trend Line and a Crime Type Trend Line using *plotly*. The Crime Type Trend line changes based on the type of crime selected. 
+    - Defined callback and function to determine the radio button options and to build the Bar chart using *plotly express*. The Bar Chart updates based on year selected.
+    - Defined callback and function to produce a Choropleth Map using *plotly graph_objects*. The map changes based on the year and type of crime selected.
+    - Defined a callback and function to create the Tree Map using *plotly graph_objects* that updates based on a separate year dropdown selection.
 
 ## Ethical Considerations
 
@@ -64,7 +64,6 @@ In light of growing awareness of data ethics, several key considerations were ob
 - Secondly, all data handling adhered to privacy regulations such as GDPR and CCPA to protect individuals' personally identifiable information.
 - Thirdly, the analysis was conducted transparently, documenting data sources, methodology, and assumptions to facilitate understanding and validation of results.
 - Lastly, the analysis was conducted with the purpose of enhancing students' data analytics skills while ensuring no harm to individuals or communities, thus aligning with ethical standards. These ethical practices not only ensure legal compliance but also foster trust and integrity in analytical outcomes.
-
 
 ## Sources
 
