@@ -15,6 +15,9 @@ Following the analysis, we have developed a dashboard featuring visualizations t
 3. Distribution of the top 3 crime types per year across Zip Codes via a choropleth map.
 4. Detailed insights into identity theft, including victim demographics, visualized using a Tree Map.
 
+## Presentation link
+https://www.canva.com/design/DAGIrUUqilo/KoQRpRUa4OQRe_gVMoNZfA/view?utm_content=DAGIrUUqilo&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
 ## Instructions
 - Clone the project repository to your local machine.
 - Navigate to the cloned repository and create a "Resources" folder.
