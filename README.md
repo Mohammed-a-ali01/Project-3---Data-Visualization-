@@ -10,10 +10,10 @@ The findings are intended to be valuable for a range of stakeholders, including 
 The results aim to enhance understanding of the city's dynamics to potentially reduce crime rates and improve overall safety in Los Angeles.
 
 Following the analysis, we have developed a dashboard featuring visualizations that highlight four key aspects:
-    1. Annual trends in total and by crime type using line plots.
-    2. The top 10 crime types per year presented in a horizontal bar graph.
-    3. Distribution of the top 3 crime types per year across Zip Codes via a choropleth map.
-    4. Detailed insights into identity theft, including victim demographics, visualized using a Tree Map.
+1. Annual trends in total and by crime type using line plots.
+2. The top 10 crime types per year presented in a horizontal bar graph
+3. Distribution of the top 3 crime types per year across Zip Codes via a choropleth map.
+4. Detailed insights into identity theft, including victim demographics, visualized using a Tree Map.
 
 ## Instructions
 - Clone the project repository to your local machine.
