@@ -3,54 +3,59 @@
 
 ## Project Overview
 
-This project delves into the analysis and visualization of crime data in Los Angeles spanning from 2000 to May 2024, sourced and cleaned from a Kaggle dataset.
-Excluding the year 2024, the analysis focuses on four key aspects:
-1. Total and by type annual crime trends using line plots
-2. Top 10 crime types per year depicted in a horizontal bar graph
-3. Top 3 crime types per year distributed by Zip Codes through a choropleth map
-4. Victim demographics in identity theft cases explored via treemaps.
+This project integrates individual contributions into a cohesive group effort to analyze crime data in Los Angeles spanning from 2000 to 2023. Given Los Angeles' reputation for organized gangs and criminal activities, the aim is to uncover insights that can inform strategic decisions in law enforcement, urban planning, and community safety.
 
-Utilizing Python, Pandas, Matplotlib, Plotly, Dash, and SQLite, this analysis merges individual contributions into a cohesive group effort.
-The aim is to uncover meaningful insights that inform strategic decisions in law enforcement, urban planning, and community safety across Los Angeles.
-This approach underscores our commitment to leveraging data visualization for actionable intelligence and public benefit.
+The findings are intended to be valuable for a range of stakeholders, including criminology students, police analysts, data analysis enthusiasts, and others interested in understanding urban crime dynamics.
 
-An overview of the project and its purpose
-- the project is designed to study the rate of criminal actitives in the Los Angeles Area. The Los Angeles area is notorius already for its oraginzed gangs. With the precursor in mind we are choosing to look at the rate of criminal activiies post covid limited to a time span of one year. The project looks at crimes broken down by category, density and ethinicity.
-We have created multiple visualization to closely look at the trends in different type of crimes and how they have affected the many ethinicites across the multiple nebghiourhood.
-Problem Statement:
-What is the problem? Who would be interested? And how will it help them?
-- Problem: Hownmuch crime was being committed in LA
-- People interested - Student of criminology , Police analyst , data anayisi enthusaist
-The project would help them to beeter understand the dynamics of the are and attempt to lower crim and make LA safe.
-Data Collection:
-What are different data source types, size and shape of data
-What are some challenges you faced with collection, if any
-- some of the data file we encounterd were too large encompassing many years for data, some data sets were encomapssing a extremely large geographical aread . Long time line and area coverage tended to have extremely large file size.
-Overall Approach:
-How did you approach this project? Problem framing -> data exploration -> data cleaning -> data storage -> data visualization.. and so on
-How much time you spent on each?
-- we took a simple and systematic approach towards the project. we first identified a broad problem statement and narrowed it down further to isolate the problem further.  Reducing the area covered and time lines allowed us to explore and mitigate data sets that might not have been suitable due to many data points. The data set we used was relative sized and covered a small are so cleaning the data was straight forward. after cleaning and turning the data we broke down the visualizations into line and bar graph, tree map and heat maps.
-Solution Architecture:
-What is the end to end source to target data flow look like?[A database should be used to store data and retrieved from there to plot visualizations]
-Which tools you used along the process to store, process and visualize data?
-- jupyter notebook and dash
-What are libraries/ tools you used that we didn't see in class, highlight them and wh
+-The results aim to enhance understanding of the city's dynamics to potentially reduce crime rates and improve overall safety in Los Angeles.
 
-### Cleaning the data and sending it to a Sqlite.
+Following the analysis, we have developed a dashboard featuring visualizations that highlight four key aspects:
+    1. Annual trends in total and by crime type using line plots.
+    2. The top 10 crime types per year presented in a horizontal bar graph.
+    3. Distribution of the top 3 crime types per year across Zip Codes via a choropleth map.
+    4. Detailed insights into identity theft, including victim demographics, visualized using a Tree Map.
 
-- Removed colums not needed.
-- Create the "Year" column by splitting the date and time from the "DATE OCC" column, and then extracting the year using Datetime library.
-- Map the "Vict Descent" replacing the codes with the actual descents.
-- Create the "Zip Code" column, using geopandas and shapely.geometry to transform the  "LON" and "LAT" data.
-- Removed some other columns not needed and renamed the final columns for readability.
-- The final Data Frame was sent to a sqlite data base using sqlite3.
+## Instructions
+- Clone the project repository to your local machine.
+- Navigate to the cloned repository and create a "Resources" folder.
+- Download the following files from: (https://drive.google.com/drive/folders/1SHJT23DdEPBBs0kaS0cqE71lcLufb2ha):
+    - Crime_Data_from_2020_to_Present.csv
+    - LA_County_ZIP_Codes.geojson
+- Save the files inside the "Resources" folder.
+- Open and execute the code file clean_code.ipynb using Jupyter Notebook.
+- Open your web browser and navigate to http://127.0.0.1:8050/ to access the Dash application.
 
-### Querying our data base to create the visualizations using Plotly, Python Code, Pandas and Dash.
+## General steps
+- Create a Jupyter Notebook and import data set
+- Clean the data and create a clean pandas Data frame that was extracted into a SQlite data base
+- Query the data base to obtain the data needed for the analysis and visualizations
+- Prepare data needed for the visualizations
+- Create the Dash application and code each one of the visualizations.
 
-- The data base was query using sqlalchemy. In this query 2024 was filtered out, as it was partial.
-- Create the Dash APP to show the three visalizations as a Dashboard.
-- A dropdown menu is used to select the year the user wants to see.
+## Detailed steps
+1. Import Dependencies
 
+2. Clean the data and create Data Base.
+
+    - Import csv file using *Pathlib* and *Pandas* libraries.
+    - Remove columns not needed.
+    - Create the "Year" column by splitting the date and time from the "DATE OCC" column, and then extracting the year.
+    - Map the "Vict Descent" replacing the codes with the actual descents.
+    - Create the "Zip Code" column using *Geopandas* and *Shapely.geometry* libraries and the geojson file containing the zip code coordinates to obtain the zip codes from the  "LON" and "LAT" columns.
+    - Removed some other columns not needed and renamed the final columns for readability.
+    - Extract the final Data Frame to a SQlite data base using *SQlite3*.
+
+3. Query Data Base, create dashboard and visualizations.
+    - Query the Data Base using *sqlalchemy* to create a base Data Frame with *Pandas*. 2024 data and records with no zip code were excluded.
+    - Create a zip code Data Frame needed for the Choropleth map
+    - Create lists needed for the dropdown menus.
+    - Simplify the geojson file limiting it to the zip codes needed, reducing its precision and simplifying the geometries.
+    - Create the Dashboard with *Dash*.
+    - Define the Layout
+    - Define callback and function to create a Total Trend Line and a Crime Type Trend Line using *plotly*. The Crime Type Trend line will change based on the type of crime selected. 
+    - Define callback and function to determine the radio button options and to build the Bar chart using *plotly express*. The Bar Chart will update based on year selected.
+    - Define callback and function to produce a Choropleth Map using *plotly graph_objects*. The map will change based on the year and type of crime selected.
+    - Define a callback and function to create the Tree Map usign *plotly graph_objects* that will update based on a second year dropdown selection.
 
 ## Ethical Considerations
 
