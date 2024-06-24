@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This project integrates individual contributions into a cohesive group effort to analyze crime data in Los Angeles spanning from 2000 to 2023. Given Los Angeles' reputation for organized gangs and criminal activities, the aim is to uncover insights that can inform strategic decisions in law enforcement, urban planning, and community safety.
+This project integrates individual contributions into a cohesive group effort to analyze crime data in Los Angeles spanning from 2020 to 2023. Given Los Angeles' reputation for organized gangs and criminal activities, the aim is to uncover insights that can inform strategic decisions in law enforcement, urban planning, and community safety.
 
 The findings are intended to be valuable for a range of stakeholders, including criminology students, police analysts, data analysis enthusiasts, and others interested in understanding urban crime dynamics.
 
